@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import {MaterialIndicator} from 'react-native-indicators'
 import {
   View,
   Easing,
@@ -64,15 +65,7 @@ class Loading extends Component {
     if (this.props.loading) {
       return (
         <View style={styles.container}>
-          <Animated.View style={[
-            styles.line,
-            {
-              backgroundColor: this.props.theme,
-              width,
-              transform: [{ translateX }]
-            }
-          ]}
-          />
+          <MaterialIndicator color={this.props.theme} />
         </View>
       )
     }
