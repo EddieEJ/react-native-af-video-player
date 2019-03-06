@@ -22,8 +22,7 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    alignSelf: 'center',
-    alignItems: 'center'
+    justifyContent: 'flex-start'
   },
   title: {
     flex: 1,
@@ -33,6 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 16
   },
   logo: {
+    flex: 1,
     marginLeft: 5,
     height: 25,
     width: 25
@@ -60,7 +60,7 @@ const TopBar = (props) => {
         </TextTicker>
         { more &&
           <ToggleIcon
-            style={styles.more}
+            style={[styles.more, {alignSelf: 'flex-end'}]}
             onPress={() => onMorePress()}
             paddingRight
             iconOff="more-horiz"
