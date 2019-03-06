@@ -10,6 +10,7 @@ import {
 
 import LinearGradient from 'react-native-linear-gradient'
 import TextTicker from 'react-native-text-ticker'
+import Icon from 'react-native-vector-icons/FontAwesome'
 import { ToggleIcon } from './'
 import { checkSource } from './utils'
 
@@ -27,12 +28,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    flex: 1,
     backgroundColor,
     fontSize: 16,
     alignSelf: 'center'
   },
   logo: {
+    flex: 1,
     marginLeft: 5,
     height: 25,
     width: 25
@@ -58,6 +59,8 @@ const TopBar = (props) => {
         >
           {title}
         </TextTicker>
+         <View style={{flex: 1}}>
+           <Icon name="share" size={25} />
           <ToggleIcon
             style={[styles.more, {flex: 1}]}
             onPress={() => onMorePress()}
@@ -67,6 +70,7 @@ const TopBar = (props) => {
             theme={theme.more}
             size={25}
           />
+        </View>
       </View>
     </LinearGradient>
   )
