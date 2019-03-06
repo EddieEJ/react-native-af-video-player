@@ -9,6 +9,7 @@ import {
 } from 'react-native'
 
 import LinearGradient from 'react-native-linear-gradient'
+import TextTicker from 'react-native-text-ticker'
 import { ToggleIcon } from './'
 import { checkSource } from './utils'
 
@@ -50,13 +51,13 @@ const TopBar = (props) => {
     <LinearGradient colors={['rgba(0,0,0,0.75)', 'rgba(0,0,0,0)']} style={styles.container}>
       <View style={styles.row}>
         { logo && <Image style={[styles.logo, {borderRadius: "50%"}]} resizeMode="contain" {...checkSource(logo)} />}
-        <Text
+        <TextTicker
           style={[styles.title, { color: theme.title }]}
           numberOfLines={1}
-          ellipsizeMode="tail"
+          repeatSpacer={25}
         >
           {title}
-        </Text>
+        </TextTicker>
         { more &&
           <ToggleIcon
             style={styles.more}
