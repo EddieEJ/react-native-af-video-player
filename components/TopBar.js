@@ -22,18 +22,22 @@ const styles = StyleSheet.create({
     paddingRight: 5,
   },
   row: {
+    flex: 1,
     flexDirection: 'row',
-    alignItems: 'center'
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   title: {
     flex: 1,
     backgroundColor,
     fontSize: 16,
+    alignSelf: 'center'
   },
   logo: {
     marginLeft: 5,
     height: 25,
-    width: 25
+    width: 25,
+    alignSelf: 'center'
   }
 })
 
