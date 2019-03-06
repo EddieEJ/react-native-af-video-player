@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     paddingRight: 5,
   },
   row: {
-    flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -36,8 +35,7 @@ const styles = StyleSheet.create({
   logo: {
     marginLeft: 5,
     height: 25,
-    width: 25,
-    alignSelf: 'center'
+    width: 25
   }
 })
 
