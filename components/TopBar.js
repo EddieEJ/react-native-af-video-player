@@ -65,8 +65,8 @@ const TopBar = (props) => {
             style={[styles.more, {flex: 1}]}
             onPress={() => onMorePress()}
             paddingRight
-            iconOff="more-horiz"
-            iconOn="more-horiz"
+            iconOff="more-vert"
+            iconOn="more-vert"
             theme={theme.more}
             size={25}
           />
