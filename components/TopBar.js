@@ -27,8 +27,7 @@ const styles = StyleSheet.create({
   title: {
     flex: 1,
     backgroundColor,
-    paddingLeft: 10,
-    paddingRight: 35,
+    marginRight: 5,
     fontSize: 16
   },
   logo: {
@@ -57,7 +56,6 @@ const TopBar = (props) => {
         >
           {title}
         </TextTicker>
-        { more &&
           <ToggleIcon
             style={styles.more}
             onPress={() => onMorePress()}
@@ -67,7 +65,6 @@ const TopBar = (props) => {
             theme={theme.more}
             size={25}
           />
-        }
       </View>
     </LinearGradient>
   )
