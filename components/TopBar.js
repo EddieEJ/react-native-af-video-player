@@ -17,14 +17,13 @@ const backgroundColor = 'transparent'
 
 const styles = StyleSheet.create({
   container: {
-    height: 35,
-    justifyContent: 'center'
-  },
-  row: {
     flex: 1,
-    flexDirection: 'row',
+    height: 35,
     justifyContent: 'flex-start',
     marginRight: 5,
+  },
+  row: {
+    flexDirection: 'row',
   },
   title: {
     flex: 1,
