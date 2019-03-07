@@ -180,7 +180,7 @@ class Video extends Component {
           type = Alert.alert(error.title, error.message, error.button, error.options)
           break
         default:
-          type = Alert.alert('Oops!', 'There was an error playing this video, please try again later.', [{ text: 'Close' }])
+          type = Alert.alert('Unable to play', 'There was an error playing this video. Please check your internet connection.', [{ text: 'Close' }])
           break
       }
       return type
@@ -314,7 +314,7 @@ class Video extends Component {
       <Animated.View
         style={[styles.background, fullScreen ? styles.fullScreen : inline]}
       >
-        <Text style={textStyle}>Retry</Text>
+        <Text style={textStyle}>No internet connection</Text>
         <Icons
           name="replay"
           size={60}
