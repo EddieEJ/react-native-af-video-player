@@ -45,6 +45,7 @@ const TopBar = (props) => {
     more,
     title,
     theme,
+    onSharePress,
     onMorePress
   } = props
   return (
@@ -61,7 +62,7 @@ const TopBar = (props) => {
         </TextTicker>
         </View>
          <View style={{flexDirection: "row", paddingLeft: 5}}>
-           <Icon name="share" color="white" style={{paddingTop: 2, paddingRight: 12 }} size={18} />
+           <Icon name="share" color="white" onPress={() => onSharePress()} style={{paddingTop: 2, paddingRight: 12 }} size={18} />
           <ToggleIcon
             style={[styles.more, {flex: 1}]}
             onPress={() => onMorePress()}
@@ -81,6 +82,7 @@ TopBar.propTypes = {
   title: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
   more: PropTypes.bool.isRequired,
+  onSharePress: PropTypes.func.isRequired,
   onMorePress: PropTypes.func.isRequired,
   theme: PropTypes.object.isRequired
 }
