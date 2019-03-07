@@ -19,13 +19,13 @@ const backgroundColor = 'transparent'
 const styles = StyleSheet.create({
   container: {
     height: 35,
-    justifyContent: 'flex-start',
-    paddingRight: 5,
+    justifyContent: 'center'
   },
   row: {
     flexDirection: 'row',
+    alignSelf: 'center',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: "center"
   },
   title: {
     backgroundColor,
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center'
   },
   logo: {
-    flex: 1,
     marginLeft: 5,
     height: 25,
     width: 25
@@ -52,6 +51,7 @@ const TopBar = (props) => {
     <LinearGradient colors={['rgba(0,0,0,0.75)', 'rgba(0,0,0,0)']} style={styles.container}>
       <View style={styles.row}>
         { logo && <Image style={[styles.logo, {borderRadius: 12}]} resizeMode="contain" {...checkSource(logo)} />}
+        <View style={{flex: 1}}>
         <TextTicker
           style={[styles.title, { color: theme.title }]}
           numberOfLines={1}
@@ -59,8 +59,9 @@ const TopBar = (props) => {
         >
           {title}
         </TextTicker>
-         <View style={{flex: 1}}>
-           <Icon name="share" size={25} />
+        </View>
+         <View style={{flexDirection: "row", paddingLeft: 5}}>
+           <Icon name="share" color="white" style={{paddingTop: 2}} size={18} />
           <ToggleIcon
             style={[styles.more, {flex: 1}]}
             onPress={() => onMorePress()}
