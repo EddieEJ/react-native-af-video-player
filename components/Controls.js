@@ -121,6 +121,7 @@ class Controls extends Component {
       loading,
       logo,
       more,
+      onSharePress,
       onMorePress,
       title,
       progress,
@@ -139,6 +140,7 @@ class Controls extends Component {
             title={title}
             logo={logo}
             more={more}
+            onSharePress={() => onSharePress()}
             onMorePress={() => onMorePress()}
             theme={{ title: theme.title, more: theme.more }}
           />
@@ -185,6 +187,7 @@ Controls.propTypes = {
   togglePlay: PropTypes.func.isRequired,
   onSeek: PropTypes.func.isRequired,
   onSeekRelease: PropTypes.func.isRequired,
+  onSharePress: PropTypes.func.isRequired,
   onMorePress: PropTypes.func.isRequired,
   paused: PropTypes.bool.isRequired,
   inlineOnly: PropTypes.bool.isRequired,
