@@ -7,7 +7,14 @@ const backgroundColor = 'transparent'
 
 const styles = StyleSheet.create({
   playButton: {
-    opacity: 0.9
+    opacity: 0.9,
+    shadowColor: 'black',
+    shadowOpacity: 1,
+    shadowRadius: 5,
+    shadowOffset: {
+        width: 1,
+        height: 1,
+    },
   },
   playContainer: {
     flex: 1,
