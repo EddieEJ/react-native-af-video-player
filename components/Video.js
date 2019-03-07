@@ -349,6 +349,7 @@ class Video extends Component {
       theme,
       onTimedMetadata,
       resizeMode,
+      onSharePress,
       onMorePress,
       inlineOnly,
       playInBackground,
@@ -420,6 +421,7 @@ class Video extends Component {
           logo={logo}
           title={title}
           more={!!onMorePress}
+          onSharePress={() => onSharePress()}
           onMorePress={() => onMorePress()}
           theme={setTheme}
           inlineOnly={inlineOnly}
@@ -465,6 +467,7 @@ Video.propTypes = {
   onPlay: PropTypes.func,
   onError: PropTypes.func,
   onProgress: PropTypes.func,
+  onSharePress: PropTypes.func,
   onMorePress: PropTypes.func,
   onFullScreen: PropTypes.func,
   onTimedMetadata: PropTypes.func,
@@ -495,6 +498,7 @@ Video.defaultProps = {
   onPlay: () => {},
   onError: () => {},
   onProgress: () => {},
+  onSharePress: undefined,
   onMorePress: undefined,
   onFullScreen: () => {},
   onTimedMetadata: () => {},
