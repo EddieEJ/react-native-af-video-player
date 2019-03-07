@@ -51,7 +51,7 @@ const TopBar = (props) => {
     <LinearGradient colors={['rgba(0,0,0,0.75)', 'rgba(0,0,0,0)']} style={styles.container}>
       <View style={styles.row}>
         { logo && <Image style={[styles.logo, {borderRadius: 12}]} resizeMode="contain" {...checkSource(logo)} />}
-        <View style={{flex: 1}}>
+        <View style={{flex: 1, paddingLeft: 5}}>
         <TextTicker
           style={[styles.title, { color: theme.title }]}
           numberOfLines={1}
@@ -61,7 +61,7 @@ const TopBar = (props) => {
         </TextTicker>
         </View>
          <View style={{flexDirection: "row", paddingLeft: 5}}>
-           <Icon name="share" color="white" style={{paddingTop: 2}} size={18} />
+           <Icon name="share" color="white" style={{paddingTop: 2, paddingRight: 12 }} size={18} />
           <ToggleIcon
             style={[styles.more, {flex: 1}]}
             onPress={() => onMorePress()}
