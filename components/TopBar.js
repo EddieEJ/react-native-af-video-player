@@ -5,6 +5,7 @@ import {
   View,
   StyleSheet,
   Text,
+  TouchableOpacity,
   Image
 } from 'react-native'
 
@@ -62,7 +63,9 @@ const TopBar = (props) => {
         </TextTicker>
         </View>
          <View style={{flexDirection: "row", paddingLeft: 5}}>
-           <Icon name="share" color="white" onPress={() => onSharePress()} style={{paddingTop: 2, paddingRight: 12 }} size={18} />
+           <TouchableOpacity onPress={() => onSharePress()}>
+              <Icon name="share" color="white" style={{paddingTop: 2, paddingRight: 12 }} size={18} />
+           </TouchableOpacity>
           <ToggleIcon
             style={[styles.more, {flex: 1}]}
             onPress={() => onMorePress()}
