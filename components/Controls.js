@@ -136,7 +136,7 @@ class Controls extends Component {
 
     return (
       <Touchable onPress={() => this.hideControls()}>
-        <Animated.View style={[styles.container, { opacity: this.animControls }]}>
+        <Animated.View style={[styles.container, { backgroundColor: this.state.hideControls ? 'transparent' : "rgba(0,0,0,0.3)", opacity: this.animControls }]}>
           <TopBar
             title={title}
             logo={logo}
