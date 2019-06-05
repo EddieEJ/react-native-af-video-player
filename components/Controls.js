@@ -145,14 +145,14 @@ class Controls extends Component {
             onMorePress={() => onMorePress()}
             theme={{ title: theme.title, more: theme.more }}
           />
-          <Animated.View style={[styles.flex, { transform: [{ scale: this.scale }] }]}>
+          <View style={[styles.flex]}>
             <PlayButton
               onPress={() => this.props.togglePlay()}
               paused={paused}
               loading={loading}
               theme={center}
             />
-          </Animated.View>
+          </View>
           <ControlBar
             toggleFS={() => this.props.toggleFS()}
             toggleMute={() => this.props.toggleMute()}
