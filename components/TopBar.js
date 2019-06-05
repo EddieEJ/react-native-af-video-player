@@ -9,7 +9,6 @@ import {
   Image
 } from 'react-native'
 
-import LinearGradient from 'react-native-linear-gradient'
 import TextTicker from 'react-native-text-ticker'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { ToggleIcon } from './'
@@ -50,7 +49,7 @@ const TopBar = (props) => {
     onMorePress
   } = props
   return (
-    <LinearGradient colors={['rgba(0,0,0,0.75)', 'rgba(0,0,0,0)']} style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.row}>
         { logo && <Image style={[styles.logo, {borderRadius: 12}]} resizeMode="contain" {...checkSource(logo)} />}
         <View style={{flex: 1, paddingLeft: 5}}>
@@ -77,7 +76,7 @@ const TopBar = (props) => {
           />
         </View>
       </View>
-    </LinearGradient>
+    </View>
   )
 }
 
